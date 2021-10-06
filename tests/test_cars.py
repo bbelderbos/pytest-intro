@@ -49,6 +49,11 @@ def test_create_car_from_string(same_defender_made_from_str):
     assert str(same_defender_made_from_str) == "Car: defender (2022)"
 
 
+def test_create_car_from_string_if_car_str_has_spaces():
+    car = Car.from_string("awesome defender 2022")
+    assert str(car) == "Car: awesome defender (2022)"
+
+
 def test_gt_lt_dunder_methods(defender_car, older_defender_car):
     assert defender_car > older_defender_car
     assert older_defender_car < defender_car

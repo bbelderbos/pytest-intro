@@ -23,7 +23,7 @@ class Car:
 
     @classmethod
     def from_string(cls, car_string):
-        car_args = car_string.split()
+        car_args = car_string.rsplit(" ", 1)
         return cls(*car_args)
 
     def __eq__(self, other):
