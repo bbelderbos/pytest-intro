@@ -54,5 +54,5 @@ def test_gt_lt_dunder_methods(defender_car, older_defender_car):
     assert older_defender_car < defender_car
 
 
-def test_eq_funder_method(defender_car, same_defender_made_from_str):
+def test_eq_dunder_method(defender_car, same_defender_made_from_str):
     assert defender_car == same_defender_made_from_str
