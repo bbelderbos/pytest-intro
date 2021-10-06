@@ -10,7 +10,7 @@ def defender_car():
 
 @pytest.fixture
 def older_defender_car():
-    return Car.from_string("defender 2020")
+    return Car("defender", 2020)
 
 
 @pytest.fixture
