@@ -2,7 +2,7 @@ class Car:
 
     def __init__(self, model, year):
         self.model = model
-        self.year = year
+        self.year = int(year)
         self._mileage = []
 
     def __str__(self):
@@ -17,14 +17,14 @@ class Car:
 
     @property
     def mileage_report(self):
-        print("\n".join(i for i in self._mileage))
+        print("\n".join(str(i) for i in self._mileage))
         print("---")
         print(self.miles_driven)
 
     @classmethod
-    def from_string(cls, s):
-        args = s.split()
-        return cls(*args)
+    def from_string(cls, car_string):
+        car_args = car_string.split()
+        return cls(*car_args)
 
     def __eq__(self, other):
         return self.year == other.year
